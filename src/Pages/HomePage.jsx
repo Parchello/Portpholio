@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import Loader from "../Components/Loader";
 import Island from "../Models/island";
+import Sky from "../Models/Sky";
 
 {
   /* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
@@ -13,16 +14,17 @@ const HomePage = () => {
   const adjustIslandScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -43];
-
+    let rotation = [0.1, 4.7, 0];
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
     } else {
       screenScale = [1, 1, 1];
     }
-    return [screenScale, screenPosition];
+    return [screenScale, screenPosition, rotation];
   };
 
-  const [islandScale, islandPosition] = adjustIslandScreenSize();
+  const [islandScale, islandPosition, islandRotation] =
+    adjustIslandScreenSize();
   return (
     <section className="w-full h-screen relative">
       <Canvas
@@ -30,13 +32,20 @@ const HomePage = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight />
-          <ambientLight />
-          <pointLight />
-          <spotLight />
-          <hemisphereLight />
+          <directionalLight position={[1, 1, 1]} intensity={1} />
+          <ambientLight intensity={0.5} />
 
-          <Island position={islandPosition} scale={islandScale} />
+          <hemisphereLight
+            skyColor="#b1e1ff"
+            groundColor="#000000"
+            intensity={1}
+          />
+          <Sky />
+          <Island
+            position={islandPosition}
+            scale={islandScale}
+            rotation={islandRotation}
+          />
         </Suspense>
       </Canvas>
     </section>
