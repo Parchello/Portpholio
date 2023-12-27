@@ -1,8 +1,10 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Loader from "../Components/Loader";
 import Island from "../Models/island";
 import Sky from "../Models/Sky";
+import Bird from "../Models/Bird";
+import Plane from "../Models/Plane";
 
 {
   /* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
@@ -11,6 +13,8 @@ import Sky from "../Models/Sky";
 }
 
 const HomePage = () => {
+  const [isRotating, setIsRotating] = useState(false);
+
   const adjustIslandScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -43];
@@ -23,12 +27,30 @@ const HomePage = () => {
     return [screenScale, screenPosition, rotation];
   };
 
+  const adjustPlaneScreenSize = () => {
+    let screenScale,
+      screenPosition = undefined;
+
+    if (window.innerWidth < 768) {
+      screenScale = [1.5, 1.5, 1.5];
+      screenPosition = [0, -1.5, 0];
+    } else {
+      screenScale = [3, 3, 3];
+      screenPosition = [0, -4, 4];
+    }
+    return [screenScale, screenPosition];
+  };
+
   const [islandScale, islandPosition, islandRotation] =
     adjustIslandScreenSize();
+
+  const [planeScale, planePosition] = adjustPlaneScreenSize();
   return (
     <section className="w-full h-screen relative">
       <Canvas
-        className="w-full h-screen bg-transparent"
+        className={`w-full h-screen bg-transparent' ${
+          isRotating ? "cursor-grabbing" : "cursor-grab"
+        }`}
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
@@ -40,11 +62,19 @@ const HomePage = () => {
             groundColor="#000000"
             intensity={1}
           />
+          <Bird />
           <Sky />
           <Island
             position={islandPosition}
             scale={islandScale}
             rotation={islandRotation}
+            setIsRotating={setIsRotating}
+          />
+          <Plane
+            isRotating={isRotating}
+            planeScale={planeScale}
+            planePosition={planePosition}
+            rotation={[0, 20, 0]}
           />
         </Suspense>
       </Canvas>
