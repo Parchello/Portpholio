@@ -5,7 +5,7 @@ import { AboutPage, ContactPage, HomePage, ProjectPage } from "./Pages";
 function App() {
   return (
     <main>
-      <Router>
+      <Router basename="/Portpholio">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
