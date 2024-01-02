@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://parchello.github.io/Portpholio/",
+  "homepage": "https://parchello.github.io/portpholio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
