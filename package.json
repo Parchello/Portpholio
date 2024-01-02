@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://parchello.github.io/Portpholio/",
-  "base": "//",
+  "base": "/Portpholio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
