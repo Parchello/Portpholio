@@ -220,7 +220,8 @@ export const projects = [
     iconUrl: car,
     theme: "btn-back-blue",
     name: "Phone Book",
-    description: "Simple app where You can save phone contacts.",
+    description:
+      "Simple app with using React and Redux where You can save phone contacts.",
     link: "https://parchello.github.io/goit-react-hw-08-phonebook-2/",
   },
   {
