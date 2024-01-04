@@ -239,4 +239,11 @@ export const projects = [
       "Welcome to TastyTreats, your go-to online culinary haven! Discover a world of delicious recipes from around the globe, where you can explore, create, and connect with fellow food enthusiasts.",
     link: "https://sergii-drozdiuk.github.io/Tasty-Treats/",
   },
+  {
+    iconUrl: summiz,
+    theme: "btn-back-yellow",
+    name: "Portpholio island",
+    description: "This app we You can fin some info about me=)",
+    link: "https://parchello.github.io/Portpholio/",
+  },
 ];

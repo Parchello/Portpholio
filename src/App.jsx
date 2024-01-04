@@ -1,11 +1,11 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import { AboutPage, ContactPage, HomePage, ProjectPage } from "./Pages";
 
 function App() {
   return (
     <main>
-      <Router basename="/Portpholio">
+      <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
