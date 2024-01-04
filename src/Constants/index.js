@@ -1,4 +1,3 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
   car,
   contact,
@@ -127,61 +126,6 @@ export const softSkills = [
   },
 ];
 
-export const experiences = [
-  {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#accbe1",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#fbc3bc",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#b7e4c7",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#a2d2ff",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
 export const socialLinks = [
   {
     name: "Contact",
@@ -205,7 +149,7 @@ export const projects = [
     iconUrl: pricewise,
     theme: "btn-back-red",
     name: "WebStudio",
-    description: "Just simple HTML ans css",
+    description: "Just simple HTML and css",
     link: "https://parchello.github.io/WebStudio/",
   },
   {
@@ -221,7 +165,7 @@ export const projects = [
     theme: "btn-back-blue",
     name: "Phone Book",
     description:
-      "Simple app with using React and Redux where You can save phone contacts.",
+      "Simple app with using React, Redux, Material UI. Where You can save phone contacts.",
     link: "https://parchello.github.io/goit-react-hw-08-phonebook-2/",
   },
   {
@@ -229,7 +173,7 @@ export const projects = [
     theme: "btn-back-pink",
     name: "Trending movies",
     description:
-      " A pet project.  Site with your favorite films. Which allows us to completely immerse ourselves in the atmosphere of our favorite movie. The site has a home page and a search page. Also, when choosing a film, you can look at the actors, comments and description.",
+      "Site with your favorite films. Which allows us to completely immerse ourselves in the atmosphere of our favorite movie. The site has a home page and a search page. Also, when choosing a film, you can look at the actors, comments and description.",
     link: "https://parchello.github.io/Trending-Movies/",
   },
   {
@@ -244,7 +188,8 @@ export const projects = [
     iconUrl: summiz,
     theme: "btn-back-yellow",
     name: "Portpholio island",
-    description: "This app we You can fin some info about me=)",
+    description:
+      "This app we You can fin some info about me=). Used Threejs, React, Tailwind",
     link: "https://parchello.github.io/Portpholio/",
   },
 ];
