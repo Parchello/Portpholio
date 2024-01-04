@@ -11,7 +11,7 @@ const InfoBox = ({ text, link, btnText }) => {
 const renderContent = {
   1: (
     <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
-      Hi, my name <span className="font-semibold">Сергій</span>
+      Hi, my name <span className="font-semibold">Parchevskyi Serhii</span>
       <br />
       Junior FullStack developer
     </h1>
@@ -19,7 +19,7 @@ const renderContent = {
   2: (
     <div className="info-box">
       <p className="font-medium sm:text-xl text-center">
-        Тут можна більше взнати про мене
+        Here You can find some information about me
       </p>
 
       <Link to="/about" className="neo-brutalism-white neo-btn">
@@ -31,7 +31,7 @@ const renderContent = {
   3: (
     <div className="info-box">
       <p className="font-medium sm:text-xl text-center">
-        Мої проекти можливо знайти тут =)
+        My projects placed here =)
       </p>
 
       <Link to="/projects" className="neo-brutalism-white neo-btn">
@@ -43,7 +43,7 @@ const renderContent = {
   4: (
     <div className="info-box">
       <p className="font-medium sm:text-xl text-center">
-        Тут можна більше звязатися зі мною
+        On this spot you can connect with me
       </p>
 
       <Link to="/contacts" className="neo-brutalism-white neo-btn">
